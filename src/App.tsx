@@ -1,12 +1,31 @@
-import { Button } from "./components/ui/button"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { ThemeProvider } from "./theme/theme-provider"
+import Layout from "./components/ui/layout"
+import Dashboard from "./pages/Dashboard"
+import CityDetailPage from "./pages/CityDetailPage"
+import {
+  QueryClient,
+  QueryClientProvider
+} from '@tanstack/react-query'
 
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+export default function App() {
 
-function App() {
+  const queryClient = new QueryClient()
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-    </div>
+    <QueryClientProvider client={queryClient}>
+
+      <BrowserRouter>
+        <ThemeProvider defaultTheme="dark">
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Dashboard />}></Route>
+              <Route path="/city/:cityname" element={<CityDetailPage />}></Route>
+            </Routes>
+          </Layout>
+        </ThemeProvider>
+      </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   )
 }
-
-export default App
