@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ThemeProvider } from "./theme/theme-provider"
-import Layout from "./components/ui/layout"
+import Layout from "./components/layout"
 import Dashboard from "./pages/Dashboard"
 import CityDetailPage from "./pages/CityDetailPage"
 import {
@@ -11,7 +11,16 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 export default function App() {
 
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 5 * 60 * 1000, // 5 minutes
+        gcTime: 10 * 60 * 1000, // 10 minutes
+        retry: false,
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
   return (
     <QueryClientProvider client={queryClient}>
 

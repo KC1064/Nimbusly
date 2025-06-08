@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react"
-import Navbar from "../navbar"
+import Navbar from "./navbar"
 const Layout = ({ children }: PropsWithChildren) => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-background to-muted">

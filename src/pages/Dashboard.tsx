@@ -14,7 +14,7 @@ import { WeatherForecast } from "../components/weather-forecast";
 import { HourlyTemperature } from "../components/hourly-temperature";
 import { FavoriteCities } from "@/components/favorite-cities";
 
-export function WeatherDashboard() {
+export default function Dashboard() {
   const {
     coordinates,
     error: locationError,

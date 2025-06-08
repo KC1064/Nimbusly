@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import SearchBar from "./search-bar";
 import ToggleTheme from "./toggle-theme";
+import { CitySearch } from "./city-search";
 
 export default function Navbar() {
     
@@ -11,7 +11,7 @@ export default function Navbar() {
                     <img src="./light.png" alt="" className="h-20 w-20" />
                 </Link>
                 <div className="flex gap-4">
-                    <SearchBar />
+                    <CitySearch />
                     <ToggleTheme />
                 </div>
             </div>
