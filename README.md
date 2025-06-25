@@ -23,12 +23,19 @@
 ## ✨ **Features**
 
 🎯 **Instant Location Weather** - Get real-time weather for your current location with automatic geolocation detection
+
 🔍 **Global Search** - Search weather for any city worldwide with intelligent location suggestions
+
 ⭐ **Favorite Places** - Star and save your favorite locations for quick access
+
 🌓 **Theme Switching** - Beautiful dark and light modes with seamless transitions
+
 🕐 **Hourly Forecasts** - 24-hour detailed weather predictions
+
 📅 **5-Day Outlook** - Extended weather planning with comprehensive forecasts
+
 🌡️ **Real-time Data** - Live temperature, humidity, and wind speed updates
+
 🌤️ **Visual Indicators** - Beautiful weather icons and smooth animations
 
 ---
